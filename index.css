@@ -1,0 +1,750 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #1e293b; /* dark slate */
+}
+
+/* Header / Navbar */
+header {
+  background-color: #ffea95; /* banana yellow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1e293b;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #1e293b;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #4ade80; /* green hover */
+}
+
+/* Section placeholders */
+section {
+  min-height: 80vh;
+  padding: 60px 40px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Home section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: #ffffff;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+/* Left text */
+.home-text {
+  flex: 1;
+}
+
+.home-text h1 {
+  font-size: 2rem;
+  color: #1e293b; /* dark slate text */
+  margin-bottom: 15px;
+}
+
+.home-text p {
+  font-size: 1.1rem;
+  color: #6b7280; /* muted gray */
+}
+
+/* Right image */
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li a {
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: hwb(48 90% 0%); /* banana yellow */
+  color: #1e293b;
+}
+
+.home-image img {
+  height: 500px;
+  width: 500px;
+}
+
+/* Introduction Section */
+.introduction {
+  background-color: #fefce8; /* light banana yellow */
+  min-height: 100vh; /* full screen height */
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.intro-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.intro-container h2 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+/* Divider under heading */
+.intro-divider {
+  height: 3px;
+  background-color: #ffea95; /* eco green */
+  width: 100%;
+  margin: 0 auto 30px auto;
+  border-radius: 2px;
+}
+
+.intro-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Navbar */
+  nav ul {
+    display: none; /* hide menu by default on small screens */
+    flex-direction: column;
+    background-color: #ffea95;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  nav ul.show {
+    display: flex; /* show when toggled */
+  }
+
+  .menu-toggle {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #1e293b;
+    margin-left: auto; /* push it fully to the right */
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* hide hamburger on desktop */
+  }
+}
+
+/* Home Section Responsiveness */
+@media (max-width: 900px) {
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-image img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/* Statements Section */
+
+/* Statement of the Problem */
+.problem {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.problem-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.problem-container h2 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.problem-divider {
+  height: 3px;
+  background-color: #ffea95; /* banana yellow */
+  width: 100%;
+  margin: 0 auto 30px auto;
+  border-radius: 2px;
+}
+
+.problem-container p {
+  font-size: 1.1rem;
+  color: #374151;
+  margin-bottom: 30px;
+}
+
+/* Yellow question boxes */
+.problem-box {
+  background-color: #fefce8;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.problem-box .question {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.problem-box ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.problem-box ul li {
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.problem-box p {
+  text-align: center;
+}
+
+.problem-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Conceptual Framework Section */
+.framework {
+  background-color: #fefce8; /* light banana yellow */
+  min-height: 100vh; /* full screen height */
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.framework-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.framework-container h2 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.framework-divider {
+  height: 3px;
+  background-color: #ffea95; /* banana yellow */
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+  border-radius: 2px;
+}
+
+/* Table styling */
+.framework-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  table-layout: fixed; /* fix column widths */
+}
+
+.framework-table th,
+.framework-table td {
+  padding: 20px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  text-align: left;
+  width: 33.33%; /* equal width for all columns */
+  word-wrap: break-word; /* wrap long text inside cell */
+}
+
+.framework-table th {
+  background-color: #ffea95; /* banana yellow header */
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.framework-table td ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.framework-table tr:nth-child(even) td {
+  background-color: #fefce8; /* subtle stripe */
+}
+
+/* Methodology Section */
+.methodology {
+  /* light banana yellow */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.methodology-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.methodology-container h2 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.methodology-divider {
+  height: 3px;
+  background-color: #ffea95; /* banana yellow */
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  border-radius: 2px;
+}
+
+/* Methodology Cards */
+.methodology-card {
+  background-color: #ffffff; /* white for readability */
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.methodology-card h3 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.methodology-card p,
+.methodology-card ul,
+.methodology-card ol {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.methodology-card ul,
+.methodology-card ol {
+  margin-left: 20px;
+}
+
+.methodology-card li {
+  margin-bottom: 8px;
+}
+
+/* Literature Review Section */
+.literature {
+  background-color: #fefce8; /* light banana yellow */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.literature-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.literature-container h2 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.literature-divider {
+  height: 3px;
+  background-color: #ffea95; /* banana yellow */
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  border-radius: 2px;
+}
+
+/* Cards */
+.literature-card {
+  background-color: #ffffff; /* white card */
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.literature-card h3 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.literature-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 15px;
+}
+
+.literature-card ul.references-list {
+  font-size: 0.95rem;
+  color: #4b5563; /* muted gray */
+  list-style: decimal inside;
+  margin-top: 15px;
+}
+
+.literature-card ul.references-list li a {
+  color: #2563eb; /* link color */
+  text-decoration: underline;
+}
+
+/* Toggle References Button */
+.toggle-references {
+  background-color: #ffea95;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  color: #1e293b;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.toggle-references:hover {
+  background-color: #fbbf24;
+}
+
+/* References Section */
+.rrl-section {
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.rrl-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+/* Toggle button */
+.toggle-btn {
+  background-color: #ffea95;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #eab308; /* darker banana yellow */
+}
+
+/* References Box */
+.references-box {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 2px solid;
+  border-radius: 12px;
+  padding: 25px;
+  height: 400px; /* fixed height */
+  overflow-y: auto; /* scrollable */
+  text-align: left;
+  display: none; /* hidden by default, toggled */
+}
+
+/* Numbered list styling */
+.references-list {
+  counter-reset: ref-counter;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.references-list li {
+  counter-increment: ref-counter;
+  margin-bottom: 20px; /* space between items */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.references-list li::before {
+  content: counter(ref-counter) ". ";
+  font-weight: bold;
+}
+
+/* Links */
+.references-list li a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.references-list li a:hover {
+  text-decoration: underline;
+}
+
+/* Minimal Black Scrollbar for References Box */
+.references-box::-webkit-scrollbar {
+  width: 8px; /* thin scrollbar */
+}
+
+.references-box::-webkit-scrollbar-track {
+  background: #ffffff; /* background of scroll area */
+}
+
+.references-box::-webkit-scrollbar-thumb {
+  background-color: #000000; /* black thumb */
+  border-radius: 8px; /* rounded edges */
+  border: none; /* no extra border */
+}
+
+.references-box::-webkit-scrollbar-thumb:hover {
+  background-color: #333333; /* slightly darker on hover */
+}
+
+/* Firefox */
+.references-box {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #ffffff;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(30px); /* slide up effect */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Members Section */
+.members-section {
+  background-color: #ffffff;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.members-section h2 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+/* Members Container */
+.members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Member Card */
+.member-card {
+  display: flex;
+  align-items: center;
+  background-color: #fefce8; /* light banana yellow */
+  border-left: 5px solid #facc15; /* vertical accent */
+  border-radius: 8px;
+  padding: 20px;
+  min-width: 280px;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Profile Photo Circle */
+.member-photo {
+  width: 60px;
+  height: 60px;
+  background-color: #facc15;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+/* Member Info */
+.member-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.member-info p {
+  font-size: 0.95rem;
+  color: #374151;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .members-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member-card {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .member-photo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Footer */
+.site-footer {
+  background-color: #222222; /* dark slate background */
+  color: #fefce8; /* light banana text */
+  padding: 40px 20px 20px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #facc15; /* banana yellow highlight */
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 0.95rem;
+  color: #fefce8;
+  text-decoration: none;
+  line-height: 1.8;
+}
+
+.footer-section a:hover {
+  color: #facc15;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #facc15;
+  padding-top: 15px;
+  font-size: 0.85rem;
+  color: #fefce8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .methodology {
+    margin-top: 100px;
+  }
+}
